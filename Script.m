@@ -1,23 +1,23 @@
 %% Housekeeping
  
-addpath('ximu_matlab_library');	% include x-IMU MATLAB library
-addpath('quaternion_library');	% include quatenrion library
-close all;                     	% close all figures
-clear;                         	% clear all variables
-clc;                          	% clear the command terminal
+% addpath('ximu_matlab_library');	% include x-IMU MATLAB library
+% addpath('quaternion_library');	% include quatenrion library
+% close all;                     	% close all figures
+% clear;                         	% clear all variables
+% clc;                          	% clear the command terminal
  
 %% Import data
 
-xIMUdata = xIMUdataClass('LoggedData/LoggedData');
+% xIMUdata = xIMUdataClass('LoggedData/LoggedData');
 
-samplePeriod = 1/256;
-
-gyr = [xIMUdata.CalInertialAndMagneticData.Gyroscope.X...
-       xIMUdata.CalInertialAndMagneticData.Gyroscope.Y...
-       xIMUdata.CalInertialAndMagneticData.Gyroscope.Z];        % gyroscope
-acc = [xIMUdata.CalInertialAndMagneticData.Accelerometer.X...
-       xIMUdata.CalInertialAndMagneticData.Accelerometer.Y...
-       xIMUdata.CalInertialAndMagneticData.Accelerometer.Z];	% accelerometer
+samplePeriod = 1/100;
+% 
+% gyr = [xIMUdata.CalInertialAndMagneticData.Gyroscope.X...
+%        xIMUdata.CalInertialAndMagneticData.Gyroscope.Y...
+%        xIMUdata.CalInertialAndMagneticData.Gyroscope.Z];        % gyroscope
+% acc = [xIMUdata.CalInertialAndMagneticData.Accelerometer.X...
+%        xIMUdata.CalInertialAndMagneticData.Accelerometer.Y...
+%        xIMUdata.CalInertialAndMagneticData.Accelerometer.Z];	% accelerometer
   
 % Plot
 figure('NumberTitle', 'off', 'Name', 'Gyroscope');
